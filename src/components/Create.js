@@ -35,7 +35,7 @@ class Create extends Component {
                 description: '',
                 price: ''
             });
-            this.props.history.push("/")
+            this.props.history.push("/dashboard")
         })
             .catch((error) => {
                 console.error("Error adding item: ", error);
