@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from '../firebase/Firebase';
+import img from './item1.jpg';
 
 class Home extends Component {
 
@@ -37,19 +38,21 @@ class Home extends Component {
         let productList = this.state.products.map(product => {
             return (
                 <div class="card" style={{ width: '18rem' }}>
+                    <img class="card-img-top" src={img} alt="Card image cap"></img>
                     <div class="card-body">
                         <h5 class="card-title">{product.title}</h5>
                         <p class="card-text">{product.description}</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary">Add to Cart</a>
                     </div>
                 </div>
             )
         })
         return (
             <div className="container">
-                <h3 className="center">Our items</h3>
                 <div className="box">
-                    {productList}
+                    <div class="row">
+                        {productList}
+                    </div>
                 </div>
             </div>
         )
