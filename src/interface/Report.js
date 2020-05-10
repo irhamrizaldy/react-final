@@ -5,8 +5,7 @@ import firebase from '../firebase/Firebase';
 class Report extends Component {
 
     constructor() {
-        super();
-        this.ref = firebase.firestore().collection('report');
+        super();;
         this.state = {
             fullname: '',
             username: '',
@@ -25,21 +24,8 @@ class Report extends Component {
 
         const { fullname, username, reportText } = this.state;
 
-        this.ref.add({
-            fullname,
-            username,
-            reportText
-        }).then((docRef) => {
-            this.setState({
-                fullname: '',
-                username: '',
-                reportText: ''
-            });
-            this.props.history.push("/")
-        })
-            .catch((error) => {
-                console.error("Error adding item: ", error);
-            });
+        firebase.database().ref("/Report Summary").push().set(this.state);
+        this.props.history.push("/")
     }
 
     render() {
