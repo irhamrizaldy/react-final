@@ -10,6 +10,7 @@ const Navbar = () => {
                 <ul className="right">
                     <li><Link to="/">Shop</Link></li>
                     <li><Link to="/cart">My Cart</Link></li>
+                    <li><Link to="/report">Report</Link></li>
                 </ul>
             </div>
         </nav>

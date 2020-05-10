@@ -9,12 +9,14 @@ import Edit from './components/Edit';
 import Create from './components/Create';
 import Show from './components/Show';
 import Dashboard from './components/Dashboard';
+import Report from './interface/Report';
 
 ReactDOM.render(
   <Router>
     <div>
       <Route exact path='/' component={App} />
       <Route path='/dashboard' component={Dashboard} />
+      <Route path='/report' component={Report} />
       <Route path='/edit/:id' component={Edit} />
       <Route path='/create' component={Create} />
       <Route path='/show/:id' component={Show} />
