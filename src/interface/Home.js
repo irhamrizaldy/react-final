@@ -34,13 +34,22 @@ class Home extends Component {
     }
 
     render() {
-
+        let productList = this.state.products.map(product => {
+            return (
+                <div class="card" style={{ width: '18rem' }}>
+                    <div class="card-body">
+                        <h5 class="card-title">{product.title}</h5>
+                        <p class="card-text">{product.description}</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            )
+        })
         return (
-            <div class="card" style={{width: '18rem'}}>
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div className="container">
+                <h3 className="center">Our items</h3>
+                <div className="box">
+                    {productList}
                 </div>
             </div>
         )
