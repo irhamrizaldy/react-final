@@ -42,6 +42,7 @@ class Home extends Component {
                     <div class="card-body">
                         <h5 class="card-title">{product.title}</h5>
                         <p class="card-text">{product.description}</p>
+                        <p><b>{product.price}</b></p>
                         <a href="#" class="btn btn-primary">Add to Cart</a>
                     </div>
                 </div>
