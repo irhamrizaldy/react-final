@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import firebase from '../firebase/Firebase';
 import img from './item1.jpg';
+import { Link } from 'react-router-dom';
 
 class Home extends Component {
 
@@ -43,7 +44,7 @@ class Home extends Component {
                         <h5 className="card-title" style={{ fontFamily: 'arial' }} >{product.title}</h5>
                         <p className="card-text">{product.description}</p>
                         <p><b>{product.price}</b></p>
-                        <a className="btn btn-primary">Add to Cart</a>
+                        <button className="btn btn-light"><Link to='/cart'>Add to Cart</Link></button>
                     </div>
                 </div>
             )
