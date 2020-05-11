@@ -43,7 +43,7 @@ class Report extends Component {
                         <input type="text" class="form-control" id="username" name="username" value={username} onChange={this.onChange} placeholder="Input Username" />
                     </div>
                     <div class="form-group">
-                        <textarea type="text" class="form-control" id="reportText" name="reportText" onChange={this.onChange} placeholder="Your Problem">{reportText}</textarea>
+                        <textarea type="text" class="form-control" id="reportText" name="reportText" value={reportText} onChange={this.onChange} placeholder="Your Problem" />
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
