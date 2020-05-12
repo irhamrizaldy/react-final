@@ -4,11 +4,11 @@ import firebase from '../firebase/Firebase';
 
 class Cart extends Component {
     constructor() {
-        super();;
+        super();
         this.state = {
             fullname: '',
             address: '',
-            item: ''
+            item: []
         };
     }
 
@@ -42,7 +42,12 @@ class Cart extends Component {
                         <input type="text" class="form-control" id="address" name="address" value={address} onChange={this.onChange} placeholder="Input Address" />
                     </div>
                     <div class="form-group">
-                        <textarea type="text" class="form-control" id="item" name="item" value={item} onChange={this.onChange} placeholder="Your Item" />
+                        <select type="text" class="form-control" id="item" name="item" value={item} onChange={this.onChange} placeholder="Your Item" >
+                            <option value="adidas">Adidas</option>
+                            <option value="nike">Nike</option>
+                            <option value="puma">Puma</option>
+                            <option value="converse">Converse</option>
+                        </select>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

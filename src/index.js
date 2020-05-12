@@ -11,12 +11,14 @@ import Show from './components/Show';
 import Dashboard from './components/Dashboard';
 import Report from './interface/Report';
 import Cart from './interface/Cart';
+import Home from './interface/Home';
 
 ReactDOM.render(
   <Router>
     <div>
       <Route exact path='/' component={App} />
       <Route path='/dashboard' component={Dashboard} />
+      <Route path='/home/:id' component={Home} />
       <Route path='/cart' component={Cart} />
       <Route path='/report' component={Report} />
       <Route path='/edit/:id' component={Edit} />
